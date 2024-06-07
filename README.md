@@ -27,4 +27,19 @@ And then I subscribe the event delegates with 3 methods inside Form1.cs. It will
 reportSender.BuildReportText += SetReceivingText;
 reportSender.BuildReportText += SetSendingText;
 reportSender.BuildReportText += SetReceivedText;
+
+private void SetReceivingText(string media)
+{
+    messageList.Add($"Receiving file(s) from {media} account {Environment.NewLine}");
+}
+
+private void SetSendingText(string media)
+{
+    messageList.Add($"Sending file(s) to another {media} account {Environment.NewLine}");
+}
+
+private void SetReceivedText(string media)
+{
+    messageList.Add($"File(s) received in the destination {media} account {Environment.NewLine}");
+}
 ```
