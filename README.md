@@ -43,3 +43,20 @@ private void SetReceivedText(string media)
     messageList.Add($"File(s) received in the destination {media} account {Environment.NewLine}");
 }
 ```
+
+Here is how I call the method inside the ReportSender class and display the result
+```cs
+private void BtnSendByEmail_Click(object? sender, EventArgs e)
+{
+    messageList.Clear();
+    reportSender.BuildText("Email");
+    DisplayResult(messageList);
+}
+
+private void DisplayResult(List<string> messageList)
+{
+    txtResult.ResetText();
+    foreach (string message in messageList)
+        txtResult.Text += message;
+}
+```
