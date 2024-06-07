@@ -19,7 +19,7 @@ Here is the declaration of the event and delegate.
 
 I declare the class where the delegates are placed on the Form1.cs page.
 ```cs
-private List<string> messageList = [];
+private ReportSender reportSender = new();
 ```
 
 And then I subscribe the event delegates with 3 methods inside Form1.cs. It will make the method executed 3 times. 
